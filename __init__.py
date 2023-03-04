@@ -35,6 +35,6 @@ async def pyrandmeme():
             var=res['data']['children'][random.randint(0, 16)]['data']
             pymeme = discord.Embed(url="https://www.reddit.com" + var['permalink'], title="**" + var['title'] + "**", color=0xe91e63)
             pymeme.set_image(url=var['url'])
-            pymeme.set_footer(text='Post made by u/' + var['author'] + ' and posted in subreddit r/' + var['subreddit'] + '.')
+            pymeme.set_footer(text='Post made by reddit user u/' + var['author'] + ' and posted in subreddit r/' + var['subreddit'] + '.')
             return pymeme
         await pyrandmeme()
